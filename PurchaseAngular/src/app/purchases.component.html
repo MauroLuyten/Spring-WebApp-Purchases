@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th></th>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th></th>
+
+  </tr>
+
+  <tr *ngFor="let purchase of purchases">
+    <td><img src="{{purchase.imageurl}}" alt="" class="overview-img"></td>
+    <td>{{purchase.id}}</td>
+    <td>{{purchase.title}}</td>
+    <td>{{purchase.description}}</td>
+    <td>€{{purchase.price}}</td>
+    <td><a href="" (click)="deletePurchase(purchase.id)">delete</a></td>
+
+  </tr>
+
+</table>
